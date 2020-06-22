@@ -18,48 +18,58 @@ const INITIAL_VIEW_STATE = {
 mapboxgl.accessToken = process.env.MapboxAccessToken; // eslint-disable-line
 
 
+const map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/light-v9',
+  // Note: deck.gl will be in charge of interaction and event handling
+  interactive: false,
+  center: [INITIAL_VIEW_STATE.longitude, INITIAL_VIEW_STATE.latitude],
+  zoom: INITIAL_VIEW_STATE.zoom,
+  bearing: INITIAL_VIEW_STATE.bearing,
+  pitch: INITIAL_VIEW_STATE.pitch
+});
+
+const deck = new Deck({
+  canvas: 'deck-canvas',
+  width: '100%',
+  height: '100%',
+  initialViewState: INITIAL_VIEW_STATE,
+  controller: true,
+  onViewStateChange: ({viewState}) => {
+    map.jumpTo({
+      center: [viewState.longitude, viewState.latitude],
+      zoom: viewState.zoom,
+      bearing: viewState.bearing,
+      pitch: viewState.pitch
+    });
+  },
+});
+
+
+function renderDeck(map, featureCollection, currentTime) {
+  deck.setProps({ layers: [
+    new FlowMapLayer({
+      id: 'my-flowmap-layer',
+      locations: featureCollection,
+      animate: true,
+      animationCurrentTime: currentTime,
+      flows: featureCollection.features.filter(f => f.properties.scalerank < 3),
+      getAnimatedFlowLineStaggering: (f, { index }) => index / 10,
+      getFlowMagnitude: f => f.properties.scalerank,
+      getFlowOriginId: f => 'LHR',
+      getFlowDestId: f => f.properties.abbrev,
+      getLocationId: f => f.properties.abbrev,
+      getLocationCentroid: f => f.geometry.coordinates,
+    })
+  ]});
+
+  window.requestAnimationFrame((time) => {
+    renderDeck(map, featureCollection, time / 50);
+  });
+}
+
 fetch(AIR_PORTS)
   .then(response => response.json())
   .then(featureCollection => {
-
-    const map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/light-v9',
-      // Note: deck.gl will be in charge of interaction and event handling
-      interactive: false,
-      center: [INITIAL_VIEW_STATE.longitude, INITIAL_VIEW_STATE.latitude],
-      zoom: INITIAL_VIEW_STATE.zoom,
-      bearing: INITIAL_VIEW_STATE.bearing,
-      pitch: INITIAL_VIEW_STATE.pitch
-    });
-
-    new Deck({
-      canvas: 'deck-canvas',
-      width: '100%',
-      height: '100%',
-      initialViewState: INITIAL_VIEW_STATE,
-      controller: true,
-      onViewStateChange: ({viewState}) => {
-        map.jumpTo({
-          center: [viewState.longitude, viewState.latitude],
-          zoom: viewState.zoom,
-          bearing: viewState.bearing,
-          pitch: viewState.pitch
-        });
-      },
-      layers: [
-        new FlowMapLayer({
-          id: 'my-flowmap-layer',
-          locations: featureCollection,
-          flows: featureCollection.features.filter(f => f.properties.scalerank < 3),
-          getFlowMagnitude: f => f.properties.scalerank,
-          getFlowOriginId: f => 'LHR',
-          getFlowDestId: f => f.properties.abbrev,
-          getLocationId: f => f.properties.abbrev,
-          getLocationCentroid: f => f.geometry.coordinates,
-        })
-      ]
-    });
-
-
+    renderDeck(map, featureCollection, 0);
   });
