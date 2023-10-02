@@ -155,10 +155,10 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.18.20.tgz#786c5f41f043b07afb1af37683d7c33668858f6d"
   integrity sha512-kTdfRcSiDfQca/y9QIkng02avJ+NCaQvrMejlsB3RRv5sE9rRoeBPISaZpKxHELzRxZyLvNts1P27W3wV+8geQ==
 
-"@flowmap.gl/data@8.0.0-alpha.26":
-  version "8.0.0-alpha.26"
-  resolved "https://registry.yarnpkg.com/@flowmap.gl/data/-/data-8.0.0-alpha.26.tgz#d5eaf023b1fdb146a1741feca79f25f48424d418"
-  integrity sha512-nKghwF8hdLF1tT80M77YaEJTW2krrPHrBrcDxdzaTSTlH7hPKSGAmr7C9VRni9FK79PdsDKlS9Rb8nBlSl8RYA==
+"@flowmap.gl/data@8.0.0-alpha.27":
+  version "8.0.0-alpha.27"
+  resolved "https://registry.yarnpkg.com/@flowmap.gl/data/-/data-8.0.0-alpha.27.tgz#061b2964ed3b6a35fc11deb8e64cc8010cbb4293"
+  integrity sha512-ee84niWRwGXpUZneHGRqD7KE4N5JmU6Vif90f2Qg6OmIwCrSVbozoaallz4MWtnnZuHaC/grXL6d2xgJgcZwVw==
   dependencies:
     d3-array "^3.2.4"
     d3-color "2 - 3"
@@ -168,14 +168,14 @@
     d3-scale-chromatic "2 - 3"
     d3-time "^3.1.0"
     d3-time-format "3 - 4"
-    kdbush "^3.0.0"
+    kdbush "^4.0.2"
     reselect "^4.1.6"
     seedrandom "^3.0.5"
 
-"@flowmap.gl/layers@8.0.0-alpha.26":
-  version "8.0.0-alpha.26"
-  resolved "https://registry.yarnpkg.com/@flowmap.gl/layers/-/layers-8.0.0-alpha.26.tgz#1b8a356bc1062eb72bc804424ea45f448c67b544"
-  integrity sha512-pC6fL+qebh8w6mReq7auOnRP874aGnaxNYk3VjEBHZUy2qxuX7U6arLjc/KXoDtj4e1nFtXQa0J371ozBwX2ag==
+"@flowmap.gl/layers@8.0.0-alpha.27":
+  version "8.0.0-alpha.27"
+  resolved "https://registry.yarnpkg.com/@flowmap.gl/layers/-/layers-8.0.0-alpha.27.tgz#82bf617d54aae2333344267b71d8faa6ecaddfbe"
+  integrity sha512-h6BrAP6a+39D+jRMuFOWuFrefrupr/VnbXbMlrghohxWaHNZJhl+00oRkkcMrwqKIRlYhUguy3aVKeNWJq3Qsg==
 
 "@loaders.gl/core@^3.4.13":
   version "3.4.14"
@@ -704,11 +704,6 @@ json-stringify-pretty-compact@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/json-stringify-pretty-compact/-/json-stringify-pretty-compact-3.0.0.tgz#f71ef9d82ef16483a407869556588e91b681d9ab"
   integrity sha512-Rc2suX5meI0S3bfdZuA7JMFBGkJ875ApfVyq2WHELjBiiG22My/l7/8zPpH/CfFVQHuVLd8NLR0nv6vi0BYYKA==
-
-kdbush@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/kdbush/-/kdbush-3.0.0.tgz#f8484794d47004cc2d85ed3a79353dbe0abc2bf0"
-  integrity sha512-hRkd6/XW4HTsA9vjVpY9tuXJYLSlelnkTmVFu4M9/7MIYQtFcHpbugAU7UbOfjOiVSVYl2fqgBuJ32JUmRo5Ew==
 
 kdbush@^4.0.2:
   version "4.0.2"

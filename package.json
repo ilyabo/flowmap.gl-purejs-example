@@ -12,8 +12,8 @@
   "dependencies": {
     "@deck.gl/core": "^8.9.28",
     "@deck.gl/layers": "^8.9.28",
-    "@flowmap.gl/data": "8.0.0-alpha.26",
-    "@flowmap.gl/layers": "8.0.0-alpha.26",
+    "@flowmap.gl/data": "8.0.0-alpha.27",
+    "@flowmap.gl/layers": "8.0.0-alpha.27",
     "d3-fetch": "^3.0.1",
     "maplibre-gl": "^3.3.1"
   },
