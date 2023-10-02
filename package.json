@@ -1,21 +1,23 @@
 {
   "name": "pure-js-mapbox",
-  "version": "0.0.0",
+  "version": "0.0.2",
+  "type": "module",
+  "private": true,
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --progress --hot --open",
-    "start-local": "webpack-dev-server --env.local --progress --hot --open",
-    "build": "webpack -p"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@deck.gl/core": "^8.1.0",
-    "@deck.gl/layers": "^8.1.0",
-    "@flowmap.gl/core": "^7.2.0",
-    "mapbox-gl": "^1.0.0"
+    "@deck.gl/core": "^8.9.28",
+    "@deck.gl/layers": "^8.9.28",
+    "@flowmap.gl/data": "8.0.0-alpha.26",
+    "@flowmap.gl/layers": "8.0.0-alpha.26",
+    "d3-fetch": "^3.0.1",
+    "maplibre-gl": "^3.3.1"
   },
   "devDependencies": {
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.1"
+    "vite": "^4.4.9"
   }
 }
