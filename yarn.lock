@@ -155,10 +155,10 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.18.20.tgz#786c5f41f043b07afb1af37683d7c33668858f6d"
   integrity sha512-kTdfRcSiDfQca/y9QIkng02avJ+NCaQvrMejlsB3RRv5sE9rRoeBPISaZpKxHELzRxZyLvNts1P27W3wV+8geQ==
 
-"@flowmap.gl/data@8.0.0-alpha.27":
-  version "8.0.0-alpha.27"
-  resolved "https://registry.yarnpkg.com/@flowmap.gl/data/-/data-8.0.0-alpha.27.tgz#061b2964ed3b6a35fc11deb8e64cc8010cbb4293"
-  integrity sha512-ee84niWRwGXpUZneHGRqD7KE4N5JmU6Vif90f2Qg6OmIwCrSVbozoaallz4MWtnnZuHaC/grXL6d2xgJgcZwVw==
+"@flowmap.gl/data@8.0.1":
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/@flowmap.gl/data/-/data-8.0.1.tgz#73061aec6bfbf73714975a782315c557a80d41c3"
+  integrity sha512-S0NmOiwSUVo58PiyX8lzNrPAELCbBa8+1FbHSn9mSrKJzRMJv3B0/eX0fQUqyZxH4tkbX78Af4kAjOYSENH6mw==
   dependencies:
     d3-array "^3.2.4"
     d3-color "2 - 3"
@@ -172,10 +172,10 @@
     reselect "^4.1.6"
     seedrandom "^3.0.5"
 
-"@flowmap.gl/layers@8.0.0-alpha.27":
-  version "8.0.0-alpha.27"
-  resolved "https://registry.yarnpkg.com/@flowmap.gl/layers/-/layers-8.0.0-alpha.27.tgz#82bf617d54aae2333344267b71d8faa6ecaddfbe"
-  integrity sha512-h6BrAP6a+39D+jRMuFOWuFrefrupr/VnbXbMlrghohxWaHNZJhl+00oRkkcMrwqKIRlYhUguy3aVKeNWJq3Qsg==
+"@flowmap.gl/layers@8.0.1":
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/@flowmap.gl/layers/-/layers-8.0.1.tgz#281d2798aebe65bbc5979a591b90cc39d3c097b3"
+  integrity sha512-esOYHmthi52oZkNdxxKdY1YCkEs2AYQXNKWOvhEUMwDuF66MloMwpqrCrCFcHak2lQ7BrMlChC7BACuDdZf+dQ==
 
 "@loaders.gl/core@^3.4.13":
   version "3.4.14"
