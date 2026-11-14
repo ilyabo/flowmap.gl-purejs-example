@@ -1,5 +1,7 @@
 ## flowmap.gl with Maplibre example
 
+Uses flowmap.gl 9.5.0 with deck.gl 9.4.
+
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/github/ilyabo/flowmap.gl-purejs-example?file=main.js)
 
 

@@ -8,6 +8,7 @@ import {FlowmapLayer} from "@flowmap.gl/layers";
 import {getViewStateForLocations} from "@flowmap.gl/data";
 import {csv} from "d3-fetch";
 import maplibregl from "maplibre-gl";
+import "maplibre-gl/dist/maplibre-gl.css";
 
 const MAPLIBRE_STYLE =
   "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json";
@@ -53,12 +54,11 @@ fetchData().then((data) => {
   });
 
   const deck = new Deck({
-    canvas: "deck-canvas",
+    canvas: globalThis.document.getElementById("deck-canvas"),
     width: "100%",
     height: "100%",
     initialViewState: initialViewState,
     controller: true,
-    map: true,
     onViewStateChange: ({viewState}) => {
       map.jumpTo({
         center: [viewState.longitude, viewState.latitude],
